@@ -10,29 +10,10 @@
     position: relative; /* Para posicionar el botón de retroceso */
 }
 /* Botón de retroceso */
-.boton-retroceso {
+.buttons {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #fff;
-    border: 1px solid #333;
-    border-radius: 50%;
-    width: 60px; /* Aumentar el tamaño del botón */
-    height: 60px; /* Aumentar el tamaño del botón */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
-}
-
-.boton-retroceso span {
-    font-size: 30px; /* Aumentar el tamaño de la flecha */
-}
-
-.boton-retroceso:hover {
-    background: #f0f0f0;
+    top: -40px;
+    left: -10px;
 }
 h3 {
     font-size: 24px;

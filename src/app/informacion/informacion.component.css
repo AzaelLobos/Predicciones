@@ -1,0 +1,60 @@
+.buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-bottom: 50px; /* Ajusta la distancia entre textarea y la información */
+}
+
+.large-textarea {
+    width: 80%;
+    height: 350px; /* Aumenta el tamaño */
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    resize: none;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Aumenta la distancia entre textarea y la info */
+}
+
+.info-text {
+    font-size: 30px; /* Hace el texto más grande */
+    margin-bottom: 30px; /* Aumenta el espacio entre el texto y los botones */
+    color: #333;
+}
+
+.button-group {
+    display: flex;
+    gap: 40px; /* Aumenta el espacio entre los botones */
+}
+
+.image-button {
+    width: 90px; /* Aumenta el tamaño de los botones */
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.button-1 {
+    background-image: url('../../assets/resources/images/link.jpg'); /* Ruta a la imagen */
+}
+
+.button-2 {
+    background-image: url('../../assets/resources/images/python.png'); /* Ruta a la imagen */
+}

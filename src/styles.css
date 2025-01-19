@@ -44,3 +44,35 @@ body {
     transform: translate(-50%, -50%); /* Centra la imagen exactamente */
     margin: auto;
 }
+
+
+/* Estilo de los botones */
+.buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .buttons button {
+    background-color: #fff;
+    color: #333;
+    border: solid 1px #333;
+    padding: 40px; /* Aseguramos que el padding sea igual en todas las direcciones */
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    transition: all 0.3s ease;
+  }
+  
+  .buttons button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons button:focus {
+    outline: none;
+  }
+  
