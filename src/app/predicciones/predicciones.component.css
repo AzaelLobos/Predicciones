@@ -1,0 +1,196 @@
+/* Contenedor principal */
+.predicciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90vh; /* Ocupa el 90% de la pantalla */
+    width: 90%; /* Ocupa el 90% del ancho para añadir margen */
+    margin: auto; /* Centra horizontalmente */
+    box-sizing: border-box;
+    position: relative; /* Para posicionar el botón de retroceso */
+}
+/* Botón de retroceso */
+.boton-retroceso {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 60px; /* Aumentar el tamaño del botón */
+    height: 60px; /* Aumentar el tamaño del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.boton-retroceso span {
+    font-size: 30px; /* Aumentar el tamaño de la flecha */
+}
+
+.boton-retroceso:hover {
+    background: #f0f0f0;
+}
+h3 {
+    font-size: 24px;
+    text-align: center;
+   
+    
+}
+
+/* Lado izquierdo - Formulario */
+.formulario {
+    width: 45%; /* Ocupa el 45% del ancho */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 90%; /* Ocupa el 90% de la altura del contenedor */
+    overflow-y: auto; /* Scroll si el contenido es largo */
+}
+
+/* Contenedor de las pestañas centrado */
+.tabs {
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Centra los enlaces verticalmente */
+    gap: 30px; /* Espacio entre los enlaces */
+    background-color: #fff; /* Fondo blanco para los tabs */
+    padding: 10px ; /* Espacio superior e inferior */
+    margin: 0; /* Separa los tabs del contenido */
+    width: 100%;
+}
+
+/* Estilo para los enlaces */
+.tabs a {
+    text-decoration: underline; /* Subraya el enlace */
+    color: #333; /* Color del texto */
+    padding: 15px 30px; /* Aumenta el padding para hacerlo más grande */
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+.tabs a:hover {
+    color: #007bff; /* Cambia el color cuando se pasa el mouse */
+}
+
+/* Contenedor del contenido de las pestañas */
+.pestaña-contenido {
+    margin: 20px;/* Espacio superior entre los tabs y el contenido */
+}
+
+
+
+/* Preguntas */
+
+
+.pregunta label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+ input {
+    margin-bottom: 15px;
+    margin-right: 40px;
+   
+}
+ input {
+    margin-bottom: 15px;
+    margin-right: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+/* Lado derecho - Resultados */
+.resultados-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    align-items: flex-start; /* Alinea los elementos al lado izquierdo del contenedor */
+    gap: 20px; /* Espaciado entre los bloques */
+    width: 45%; /* Mantén el mismo ancho */
+    height: 80vh;
+    padding: 20px;
+    
+}
+
+.resultado {
+    width: 100%; /* Ocupa el 45% del ancho */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%; /* Ocupa el 90% de la altura del contenedor */
+    overflow-y: auto; /* Scroll si el contenido es largo */
+}
+.resultados {
+    width: 100%; /* Ocupa el 45% del ancho */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 20%; /* Ocupa el 90% de la altura del contenedor */
+    overflow-y: auto; /* Scroll si el contenido es largo */
+}
+
+/* Estilo del título */
+.resultado h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* Recuadro para imagen */
+/* Recuadro con background image */
+
+.recuadro {
+    width: 30%;
+    height: 50%;
+    background-image: url('../../assets/resources/images/signo.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del recuadro */
+    background-position: center;
+    border: 1px dashed #333;
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Textarea */
+.resultado textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100px;
+    resize: none;
+    background: #f9f9f9;
+}
+
+/* Fondo sin gradiente */
+.body-background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,62 @@
+<div class="body-background" style="background-image: url('ruta/del/fondo.png');">
+    <!-- Botón de Retroceso -->
+    <div class="boton-retroceso" onclick="retrocederPagina()">
+        <span>&larr;</span>
+    </div>
+
+    <!-- Contenedor Principal -->
+    <div class="predicciones">
+        <!-- Lado izquierdo - Formulario -->
+        <div class="formulario">
+            <div class="tabs">
+                <a href="javascript:void(0);" id="tab-animales" onclick="mostrarPestana('animales')">Animales</a>
+                <a href="javascript:void(0);" id="tab-flores" onclick="mostrarPestana('flores')">Flores</a>
+            </div>
+        
+            <!-- Pestaña: Animales -->
+            <div class="pestaña-contenido active" id="contenido-animales">
+                <h3>Animales</h3>
+                <div class="pregunta">
+                    <label for="animal-pregunta-1">Pregunta 1</label>
+                    <input type="text" id="animal-pregunta-1" placeholder="Respuesta...">
+                </div>
+                <div class="pregunta">
+                    <label for="animal-pregunta-2">Pregunta 2</label>
+                    <input type="text" id="animal-pregunta-2" placeholder="Respuesta...">
+                </div>
+                <div class="pregunta">
+                    <label for="animal-pregunta-3">Pregunta 3</label>
+                    <input type="text" id="animal-pregunta-3" placeholder="Respuesta...">
+                </div>
+                <div class="pregunta">
+                    <label for="animal-pregunta-4">Pregunta 4</label>
+                    <input type="text" id="animal-pregunta-4" placeholder="Respuesta...">
+                </div>
+                <div class="pregunta">
+                    <label for="animal-pregunta-5">Pregunta 5</label>
+                    <input type="text" id="animal-pregunta-5" placeholder="Respuesta...">
+                </div>
+                <div class="pregunta">
+                    <label for="animal-pregunta-6">Pregunta N</label>
+                    <input type="text" id="animal-pregunta-6" placeholder="Respuesta...">
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Lado derecho - Resultados -->
+<div class="resultados-container">
+    <!-- Primer bloque -->
+    <div class="resultados">
+        <h2>Resultados</h2>
+        <input type="text" id="resultado-caja-texto">
+    </div>
+    <!-- Segundo bloque -->
+    <div class="resultado">
+        <div class="recuadro"></div>
+        <textarea id="resultado-texto" ></textarea>
+    </div>
+</div>
+
+    </div>
+</div>
