@@ -1,62 +1,77 @@
-body {
-    background-image: url('../resources/images/fondo.jpg');
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    opacity: 100%;
-  }
-  .container {
-    font-family: 'Alexandria', sans-serif;
-    font-size: 25px;
-    color: black;
-    width: 80%;
-    max-width: 800px;
-    padding: 20px;
-    text-align: center;
-  }
-  .container h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-  }
-  .container h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-  .icon {
-    width: 300px;
-    height: 300px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: -10em;
-  }
-  .icon img {
-    width: 60%;
-    height: 60%;
-  }
-  .buttons {
-    margin-top: 1px;
-  }
-  .buttons button {
-    background-color: white;
-    color: black;
-    border-color: black;
-    border: solid 1px;
-    padding: 25px 50px;
-    margin: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 10px;
-  }
-  .buttons button:hover {
-    background-color: #ddd;
-  }
+/* Estilos específicos del componente - inicio.css */
 
-  .imagen {
-    border-radius: 50%;
-  }
+/* Icono central */
+.icon {
+  background-image: url('../../assets/resources/images/logoHD.jpeg'); /* Ruta a la imagen */
+  background-size: cover; /* Ajusta la imagen para que cubra el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5em; /* Separación más adecuada entre el icono y el encabezado */
+  border-radius: 50%; /* Redondeo total para una forma circular */
+  overflow: hidden; /* Elimina cualquier contenido fuera de la imagen */
+}
+
+/* Estilo para el contenedor del texto */
+.container {
+  z-index: 2;
+  position: relative;
+  font-family: 'Alexandria', sans-serif;
+  font-size: 1.5em;
+  width: 80%;
+  max-width: 800px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Títulos */
+.container h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: white;
+}
+
+.container h2 {
+  font-size: 1.5em;
+  margin-bottom: 1.5em; /* Mejora la separación entre los títulos */
+  color: whitesmoke;
+}
+
+/* Estilo de los botones */
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  background-color: #fff;
+  color: #333;
+  border: solid 1px #333;
+  padding: 40px; /* Aseguramos que el padding sea igual en todas las direcciones */
+  margin: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 50%; /* Hace que el botón sea circular */
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:focus {
+  outline: none;
+}

@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('assets/resources/images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: relative; /* Necesario para posicionar la capa de color */
+    overflow: hidden;
+}
+
+/* Capa de fondo negro con opacidad */
+.body-background {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+}
+
+.imagen {
+    background-image: url('assets/resources/images/imagenpPrincipal.png');
+    background-size: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120%; /* Imagen ocupa 120% de la altura disponible */
+    width: 120%;  /* Imagen ocupa 120% del ancho disponible */
+    opacity: 1;
+    position: absolute;  /* Usar absolute para control más preciso */
+    top: 50%;  /* Posiciona la imagen desde el centro del contenedor */
+    left: 50%;  /* Posiciona la imagen desde el centro del contenedor */
+    transform: translate(-50%, -50%); /* Centra la imagen exactamente */
+    margin: auto;
+}
