@@ -48,31 +48,78 @@ body {
 
 /* Estilo de los botones */
 .buttons {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .buttons button {
-    background-color: #fff;
-    color: #333;
-    border: solid 1px #333;
-    padding: 40px; /* Aseguramos que el padding sea igual en todas las direcciones */
-    margin: 10px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 50%; /* Hace que el botón sea circular */
-    transition: all 0.3s ease;
-  }
-  
-  .buttons button:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .buttons button:focus {
-    outline: none;
-  }
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  background-color: #fff;
+  color: #333;
+  border: solid 1px #333;
+  padding: 10px 20px; /* Ajustamos el padding para hacer los botones más pequeños */
+  margin: 10px;
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  cursor: pointer;
+  border-radius: 0; /* Sin bordes redondeados */
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:focus {
+  outline: none;
+}
+
+.buttons button span {
+  font-size: 2em; /* Aumentamos el tamaño del span */
+}
+/* Estilo para el p-autocomplete */
+.p-autocomplete {
+  width: 100%; /* Asegura que el autocompletado ocupe el 100% de su contenedor */
+  margin-right: 20px; /* Añade márgenes arriba y abajo */
+}
+
+/* Estilo para la caja de entrada del autocompletado */
+.p-autocomplete input {
+  padding: 10px; /* Aumenta el padding para el campo de texto */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris claro */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  font-size: 1em; /* Tamaño de fuente */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+}
+
+/* Estilo del dropdown */
+.p-autocomplete-panel {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  max-height: 200px; /* Limita la altura del dropdown */
+  overflow-y: auto; /* Añade scroll si hay muchas opciones */
+  z-index: 9999;
+}
+
+/* Estilo de los items dentro del dropdown */
+.p-autocomplete-item {
+  padding: 10px; /* Padding dentro de los items */
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+/* Estilo para el hover sobre los items */
+.p-autocomplete-item:hover {
+  background-color: #f0f0f0; /* Color de fondo cuando se pasa el mouse */
+}
+
+/* Estilo de las opciones seleccionadas */
+.p-autocomplete-item.ui-state-highlight {
+  background-color: #007bff; /* Fondo azul para las opciones seleccionadas */
+  color: white; /* Texto blanco para las opciones seleccionadas */
+}
   

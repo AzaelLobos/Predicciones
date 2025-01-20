@@ -9,17 +9,17 @@
     box-sizing: border-box;
     position: relative; /* Para posicionar el botón de retroceso */
 }
+
 /* Botón de retroceso */
 .buttons {
     position: absolute;
-    top: -40px;
-    left: -10px;
+    top: 0;
+    left: 0;
 }
+
 h3 {
     font-size: 24px;
     text-align: center;
-   
-    
 }
 
 /* Lado izquierdo - Formulario */
@@ -30,10 +30,11 @@ h3 {
     padding: 20px;
     padding-top: 0;
     padding-left: 0;
+    padding-right: 0;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    height: 90%; /* Ocupa el 90% de la altura del contenedor */
+    height: 85%; /* Ocupa el 90% de la altura del contenedor */
     overflow-y: auto; /* Scroll si el contenido es largo */
 }
 
@@ -68,22 +69,97 @@ h3 {
     margin: 20px;/* Espacio superior entre los tabs y el contenido */
 }
 
-
-
 /* Preguntas */
 
-
-.pregunta label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+/* Contenedor de cada pregunta */
+.pregunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: 20px; /* Margin a la izquierda de las preguntas */
 }
- input {
+
+/* Label de la pregunta */
+.pregunta label {
+    font-weight: bold;
+    margin-right: 20px;
+    flex-grow: 1;
+    font-family: Arial, sans-serif; /* Asegura que las preguntas tengan la misma fuente */
+}
+
+/* Contenedor del toggle */
+.toggle-container {
+    flex-shrink: 0; /* Evita que el toggle cambie de tamaño */
+    display: flex;
+    justify-content: flex-end; /* Asegura que el toggle esté alineado al final */
+}
+/* Fuente para el toggle, igual que las preguntas */
+.p-togglebutton {
+    width: 50px !important; /* Reduce el tamaño del toggle */
+    height: 50px !important; /* Reduce la altura del toggle */
+    border-radius: 8px !important; /* Bordes ligeramente redondeados */
+    position: relative !important; /* Para posicionar el círculo interno */
+    background-color: #ccc !important; /* Color de fondo cuando está apagado */
+    transition: background-color 0.3s ease, transform 0.3s ease !important; /* Animación suave de cambio de fondo y transformación */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important; /* Cambia el cursor al pasar sobre el toggle */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important; /* Sombra suave */
+    font-family: Arial, sans-serif; /* Misma fuente que las preguntas */
+    margin-left: 10px; /* Margen a la izquierda del toggle */
+    margin-right: 10px; /* Margen a la derecha del toggle */
+}
+
+/* Estilo cuando el toggle está activado (encendido) */
+.p-togglebutton.p-highlight {
+    background-color: #4CAF50 !important; /* Verde cuando está activado */
+}
+
+/* Estilo cuando el toggle está desactivado (apagado) */
+.p-togglebutton.p-button {
+    background-color: #f44336 !important; /* Rojo cuando está desactivado */
+}
+
+/* Círculo interno que cambia de posición */
+.p-togglebutton .p-button-label {
+    position: absolute !important;
+    width: 20px !important; /* Reduce el tamaño del círculo interno */
+    height: 20px !important;
+    border-radius: 50% !important; /* Hace que el círculo sea completamente redondeado */
+    background-color: #fff !important; /* Color blanco para el círculo */
+    transition: transform 0.3s ease !important; /* Suave movimiento al cambiar de estado */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important; /* Sombra del círculo */
+}
+
+/* Estilo cuando el toggle está activado (desliza el círculo a la derecha) */
+.p-togglebutton.p-highlight .p-button-label {
+    transform: translateX(25px) !important; /* Desliza el círculo hacia la derecha */
+}
+
+/* Estilo cuando el toggle está desactivado (círculo a la izquierda) */
+.p-togglebutton.p-button .p-button-label {
+    transform: translateX(0) !important; /* Círculo a la izquierda */
+}
+
+/* Efecto al pasar el cursor sobre el toggle */
+.p-togglebutton:hover {
+    transform: scale(1.05) !important; /* Agranda ligeramente el toggle */
+}
+
+/* Efecto al hacer clic (agrandar el toggle) */
+.p-togglebutton:active {
+    transform: scale(0.95) !important; /* Disminuye ligeramente el toggle al hacer clic */
+}
+
+/* Estilo para los inputs en el contenedor de resultados */
+.resultados input {
     margin-bottom: 15px;
     margin-right: 40px;
-   
 }
- input {
+
+.resultados input {
     margin-bottom: 15px;
     margin-right: 20px;
     width: 100%;
@@ -100,9 +176,8 @@ h3 {
     align-items: flex-start; /* Alinea los elementos al lado izquierdo del contenedor */
     gap: 20px; /* Espaciado entre los bloques */
     width: 45%; /* Mantén el mismo ancho */
-    height: 80vh;
+    height: 87%;
     padding: 20px;
-    
 }
 
 .resultado {
@@ -117,6 +192,7 @@ h3 {
     height: 100%; /* Ocupa el 90% de la altura del contenedor */
     overflow-y: auto; /* Scroll si el contenido es largo */
 }
+
 .resultados {
     width: 100%; /* Ocupa el 45% del ancho */
     background: rgba(255, 255, 255, 0.9);
@@ -137,13 +213,8 @@ h3 {
     margin-bottom: 20px;
 }
 
-
-
-
-
 /* Recuadro para imagen */
 /* Recuadro con background image */
-
 .recuadro {
     width: 30%;
     height: 50%;
@@ -174,4 +245,44 @@ h3 {
     align-items: center;
     background-size: cover;
     background-position: center;
+}
+/* Estilo del select (dropdown) */
+.pregunta select {
+    width: 100%; /* Hace que el select ocupe todo el ancho disponible */
+    padding: 12px; /* Espaciado interno para que el texto no quede pegado al borde */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde de color gris claro */
+    background-color: #fff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves al interactuar */
+    margin-right: 20px;
+}
+
+/* Estilo cuando el select está enfocado */
+.pregunta select:focus {
+    border-color: #007bff; /* Borde azul cuando está enfocado */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul cuando está enfocado */
+    outline: none; /* Elimina el borde predeterminado del navegador */
+}
+
+/* Estilo de las opciones dentro del dropdown */
+.pregunta select option {
+    padding: 10px; /* Espaciado interno de cada opción */
+    background-color: #fff; /* Fondo blanco para las opciones */
+    color: #333; /* Color del texto de las opciones */
+}
+
+/* Estilo para el hover en las opciones */
+.pregunta select option:hover {
+    background-color: #f1f1f1; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Estilo para el select cuando está deshabilitado */
+.pregunta select:disabled {
+    background-color: #f9f9f9; /* Fondo gris claro cuando está deshabilitado */
+    border-color: #ddd; /* Borde gris claro */
+    color: #999; /* Texto gris claro */
+    cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
 }
