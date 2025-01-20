@@ -218,7 +218,7 @@ h3 {
 .recuadro {
     width: 30%;
     height: 50%;
-    background-image: url('../../assets/resources/images/signo.jpg'); /* Ruta de la imagen */
+    background-image: url('../../assets/resources/flowers/Iris Setosa/Iris Setosa Características Taxonómicas familia Iridaceae.jpg'); /* Ruta de la imagen */
     background-size: cover; /* Ajusta la imagen al tamaño del recuadro */
     background-position: center;
     border: 1px dashed #333;
