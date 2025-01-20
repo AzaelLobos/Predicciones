@@ -1,5 +1,5 @@
 <!-- Estructura principal de la página -->
-<div class="body-background" style="background-image: url('ruta/a/tu/fondo.jpg');">
+<div class="body-background" >
     <!-- Botón de retroceso -->
     <div class="buttons">
         <button [routerLink]="['/inicio']">
@@ -44,7 +44,9 @@
                         
                         
                     </div>
+                    
                 </div>
+                <hr class="linea-horizontal">
             </div>
         
             <div class="pestana-contenido" *ngIf="selectedTab === 'flores'">
@@ -74,7 +76,13 @@
                         
                         
                     </div>
+                    
                 </div>
+                <hr class="linea-horizontal">
+            </div>
+            
+            <div class="boton-predecir-container" style="text-align: center; margin-top: 30px;">
+                <button class="boton-predecir" (click)="predecir()">Predecir</button>
             </div>
         </div>
         
@@ -95,5 +103,6 @@
                 <textarea id="resultado-texto"></textarea>
             </div>
         </div>
+        
     </div>
 </div>

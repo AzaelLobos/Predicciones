@@ -286,3 +286,43 @@ h3 {
     color: #999; /* Texto gris claro */
     cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
 }
+/* Estilo para el botón de predecir */
+/* Línea horizontal */
+.linea-horizontal {
+    border: 0;
+    border-top: 1px solid #ddd; /* Línea gris clara */
+    margin: 20px 0; /* Espacio arriba y abajo */
+}
+
+/* Estilo para el botón de predecir */
+.boton-predecir {
+    padding: 12px 25px; /* Espaciado interno */
+    background-color: #f0f0f0; /* Fondo gris suave */
+    color: #333; /* Texto oscuro */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: normal; /* No en negrita */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo cuando el botón se pasa el cursor sobre él */
+.boton-predecir:hover {
+    background-color: #e0e0e0; /* Fondo gris más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Ligeramente más grande */
+}
+
+/* Estilo cuando el botón es presionado */
+.boton-predecir:active {
+    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+}
+
+/* Contenedor del botón */
+.boton-predecir-container {
+    text-align: center; /* Centrado */
+    margin-top: 20px; /* Espacio superior */
+}
+
+

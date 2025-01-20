@@ -57,4 +57,7 @@ export class PrediccionesComponent {
   retrocederPagina() {
     this.router.navigate(['/inicio']);
   }
+  predecir() {
+    //this.router.navigate(['/inicio']);
+  }
 }
